@@ -22,7 +22,7 @@
   margin-block: 2rem 3rem;
 }
 .journey-frame {
-  background: color-mix(in srgb, var(--paper) var(--media-dim), var(--frame-surface, var(--surface)));
+  background: var(--frame-surface, var(--surface));
   padding: clamp(.75rem, 2vw, 1.75rem);
 }
 .journey-frame.wide { grid-column: 1 / -1; }
@@ -202,7 +202,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
-  background: color-mix(in srgb, var(--paper) var(--media-dim), var(--showcase-surface, var(--surface)));
+  background: var(--showcase-surface, var(--surface));
   border: 1px solid transparent;
 }
 .showcase-index a:hover img, .showcase-index a:focus-visible img {
@@ -232,5 +232,20 @@
 }
 
 @media screen and (prefers-color-scheme: dark) {
+  .cover.kvis-sc, [data-project="kvis-sc"] { --project-mat: #74493c; }
+  .cover.kampung-quest, [data-project="kampung-quest"] { --project-mat: #3f5377; }
+  .cover.tamestorage, [data-project="tamestorage"] { --project-mat: #47583a; }
+  .cover.mgans, [data-project="mgans"] { --project-mat: #3b5960; }
+  .cover.sleeppilot, [data-project="sleeppilot"] { --project-mat: #544875; }
+  .cover.luckdee, [data-project="luckdee"] { --project-mat: #6c532b; }
+  .cover.gokila, [data-project="gokila"] { --project-mat: #325e4c; }
+  .cover.sentctf, [data-project="sentctf"] { --project-mat: #335d7a; }
+  .cover,
+  .case[data-project] :is(.plate, .journey-frame, .showcase-index img) {
+    background: var(--project-mat, var(--surface));
+  }
+  .case[data-project] :is(.plate, .journey-frame) figcaption {
+    color: var(--ink);
+  }
   .case[data-project] { --showcase-accent: var(--accent); }
 }

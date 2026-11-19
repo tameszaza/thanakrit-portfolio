@@ -10,7 +10,6 @@
   --rule:#c7c9bf;
   --mute:#535951;
   --surface:#eceee5;
-  --media-dim:0%;
   --diagram-surface:#f1f0e9;
   --diagram-line:#a9ada2;
   --diagram-grid:#cfcec1;
@@ -27,7 +26,6 @@
     --rule:#5b5e53;
     --mute:#bfc1b5;
     --surface:#33362f;
-    --media-dim:80%;
     --diagram-surface:#30332c;
     --diagram-line:#9ca395;
     --diagram-grid:#60665a;
@@ -161,7 +159,7 @@ h1 {
 }
 .portrait {
   position:relative;
-  background:#edb78b;
+  background:#e4d8cc;
   isolation:isolate;
   overflow:hidden;
   aspect-ratio:1.16;
@@ -223,7 +221,7 @@ h1 {
   place-items:center;
   overflow:hidden;
   --cover-surface:#dbe5d9;
-  background:color-mix(in srgb, var(--paper) var(--media-dim), var(--cover-surface));
+  background:var(--cover-surface);
   padding:6% 7%;
 }
 .cover img {
