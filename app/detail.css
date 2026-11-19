@@ -74,12 +74,12 @@
 @media print {
   body { background: white; color: black; font-size: 10pt; }
   .mast, footer, .skip, .cv .back { display: none; }
-  .cv { width: 100%; line-height: 1.35; }
+  .cv { width: 100%; line-height: 1.3; }
   .cv > header { margin: 0 0 .65rem; }
   .cv > header p { font-size: 11pt; }
   .cv h1 { font-size: 30pt; margin-bottom: .5rem; }
-  .cv section { break-inside: avoid; padding: .55rem 0; }
-  .cv section p + p { margin-top: .3rem; }
+  .cv section { break-inside: avoid; padding: .4rem 0; }
+  .cv section p + p { margin-top: .25rem; }
   .cv h2 { font-size: 14pt; margin-bottom: .4rem; }
 }
 .model-figure {
