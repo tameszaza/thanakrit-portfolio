@@ -60,7 +60,7 @@ export default async function Project({ params }) {
         </section>
       </header>
       <Frame frame={project} className={`plate ${project.slug}`} lead />
-      <aside className="contribution" aria-label="My contribution">
+      <aside className="project-note" aria-label="My contribution">
         <small>My part</small>
         <p>{journey.role}</p>
         {project.url && (
@@ -83,6 +83,10 @@ export default async function Project({ params }) {
             className={`journey-frame${frame.wide ? " wide" : ""}${frame.portrait ? " portrait-frame" : ""}`}
           />
         ))}
+      </section>
+      <section className="project-note project-learning" aria-labelledby="project-learning-title">
+        <h2 id="project-learning-title">What I learned</h2>
+        <p>{journey.learned}</p>
       </section>
       <a className="nextwork" href={sitePath(`/work/${next.slug}/`)}>
         <small>Next project</small>{next.name}

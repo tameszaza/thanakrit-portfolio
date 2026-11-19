@@ -26,7 +26,6 @@ function Entry({ title, href, children }) {
 export default function CV() {
   return (
     <main id="main" className="case cv">
-      <a className="back" href={sitePath("/#about")}>About</a>
       <header>
         <small>Curriculum vitae</small>
         <h1>Damduan Thanakrit</h1>

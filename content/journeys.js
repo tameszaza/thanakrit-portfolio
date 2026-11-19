@@ -2,6 +2,7 @@ export const journeys = {
   "kvis-sc": {
     about: "Before this site, students used a shared spreadsheet to book rooms, and two groups could end up with the same slot. The live calendar gives everyone one place to see what’s free. The same site also handles equipment loans and student announcements.",
     role: "I led the student IT team and replaced a shared booking spreadsheet with a live calendar.",
+    learned: "Building the calendar taught me to model bookings around a room and a time range, and to keep the availability people see in sync with the reservations they make.",
     frames: [
       { image: "kvis-bookings.webp", label: "Reserve a room", alt: "Weekly room timetable with available reservation slots", caption: "See which rooms are free, then book a time.", wide: true },
     ],
@@ -9,6 +10,7 @@ export const journeys = {
   "kampung-quest": {
     about: "A neighbour can tell the app what they enjoy, how far they can walk, and what would make an outing accessible. The app suggests activities that fit. Neighbours can then invite each other and use a group chat to settle the details.",
     role: "I made the activity chat remember access needs, such as avoiding stairs, and sped up slow requests.",
+    learned: "I learned to carry accessibility preferences across a conversation and use them to guide suggestions. I also separated saving the user’s message from waiting for an AI reply, so the chat could show the message sooner.",
     frames: [
       { image: "kampung-accessibility.webp", label: "Set preferences", alt: "Accessibility preferences on the mobile onboarding screen", caption: "Tell the assistant how far you can walk and whether stairs are a problem.", portrait: true },
       { image: "kampung-assistant.webp", label: "Find an activity", alt: "Mobile conversation with the guided activity assistant", caption: "Find an activity that fits those needs.", portrait: true },
@@ -18,6 +20,7 @@ export const journeys = {
   tamestorage: {
     about: "I use a web page to reach the files on my old laptop from other devices. When I export a PDF from my iPad, the server links it in Obsidian and reads the pages so I can search them later. A second drive holds a backup.",
     role: "I set up the storage and backups, made my iPad notes searchable, and synced calendar changes across devices.",
+    learned: "I learned to deploy and monitor services on a home server, back up files to a separate drive, and use optical character recognition (OCR) to make scanned notes searchable.",
     frames: [
       { image: "tamestorage-files.webp", label: "My Files", alt: "Tamestorage file manager displaying a sample Studio folder", caption: "My Files with a sample project folder.", wide: true },
       { image: "storage-network.svg", label: "Storage and backups", alt: "Network diagram for the primary NAS and backup disk", caption: "One drive holds my files. A second drive stores a backup.", wide: true },
@@ -27,6 +30,7 @@ export const journeys = {
   mgans: {
     about: "We built two models that learn patterns in speech and try to reconstruct them. The differences they find help score how unusual a recording is. We tested both models on one collection of recordings and then on a separate collection they hadn’t trained on.",
     role: "Pasatorn Soikiri and I share first authorship. I worked on the model that spots synthetic speech.",
+    learned: "I learned to represent speech as mel spectrograms and use reconstruction errors to score how unusual a recording is. Comparing ROC AUC across two datasets showed me how much a detector’s performance can depend on the recordings it sees.",
     frames: [
       { image: "mgans.svg", label: "Results", alt: "eD-AnoGAN scores of 0.9211 ROC AUC on WaveFake and 0.8428 on ASVspoof2019 LA", caption: "Closer to 1 is better. The score drops on a different set of recordings.", wide: true },
       { image: "mgans-paper-architecture.webp", label: "Model architectures", alt: "The paper’s published architectures for eD-AnoGAN and RES-MGANomaly", caption: "Model architectures from Figure 1. © 2025 IEEE.", wide: true },
@@ -38,6 +42,7 @@ export const journeys = {
   sleeppilot: {
     about: "SleepPilot is a fictional sleep app with 15 help articles. The chatbot looks through those articles before answering and shows which ones it used. You can ask a follow-up without repeating the details from your first question.",
     role: "I built the search that finds the right help article and added follow-up questions that carry on the conversation.",
+    learned: "I learned to build a retrieval-augmented generation (RAG) pipeline. I used text embeddings to rank help articles and rewrote follow-up questions using earlier messages so the assistant could find and cite the relevant source.",
     frames: [
       { image: "sleeppilot-dialog.webp", label: "An answer with sources", alt: "SleepPilot Coach answering a question about wearables and showing its FAQ sources", caption: "Asked if a watch is required, the assistant answers and shows the help article it used.", portrait: true, wide: true },
     ],
@@ -45,6 +50,7 @@ export const journeys = {
   luckdee: {
     about: "I built SimpleSci to sell to a friend who tutors science. The site lets them list courses and review bank transfer receipts. Once they confirm a payment, the student gets access to the lesson videos and study materials.",
     role: "I built the storefront, checkout and private lesson pages.",
+    learned: "I learned to model checkout as a series of states in Django, from receipt submission to enrollment. I also learned to check enrollment on the server before serving the tutor’s private videos and documents.",
     frames: [
       { image: "simplesci-catalog.webp", label: "Courses", alt: "English SimpleSci course catalog with subject and level filters", caption: "Browse by subject or level.", wide: true },
       { image: "simplesci-course.webp", label: "Course page", alt: "English SimpleSci course page with topics and enrollment details", caption: "See what the course covers before enrolling.", wide: true },
@@ -54,6 +60,7 @@ export const journeys = {
   gokila: {
     about: "GO-KILA was a team project to make it easier to find people to play sports with. Players can search for nearby venues, start a team around a time and place, and use team chat to agree on the details.",
     role: "I built the database and server routes, matched players by location, and set up live team chat.",
+    learned: "I learned to model relationships between players, teams and venues, query nearby locations by distance, and keep team chat updated in real time.",
     frames: [
       { image: "gokila-create-team.webp", label: "Start a team", alt: "The GO-KILA team creation form with sport and venue choices", caption: "Pick a sport and venue when starting a team.", wide: true },
       { image: "gokila-leaderboard.webp", label: "Player rankings", alt: "The GO-KILA leaderboard with a sport filter", caption: "Compare hours played by sport.", wide: true },
@@ -63,6 +70,7 @@ export const journeys = {
   sentctf: {
     about: "SentCTF is a capture-the-flag competition run by NTU Sentinels. Teams solve cybersecurity puzzles and submit hidden codes called flags to earn points. The photos show the awards and the certificate from our third-place finish.",
     role: "I competed with Team RIPGREP.",
+    learned: "I practised analysing clues, testing one hypothesis at a time, and sharing findings with teammates. The time limit taught me to recognise when to try a different approach or move to another challenge.",
     frames: [
       { image: "sentctf-certificate.webp", label: "Third-place certificate", alt: "Damduan Thanakrit’s SentCTF 2026 third-place certificate", caption: "My third-place certificate.", wide: true },
     ],
