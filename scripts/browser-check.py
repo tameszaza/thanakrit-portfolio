@@ -12,7 +12,7 @@ with sync_playwright() as runner:
     browser = runner.chromium.launch(
         args=[
             "--disable-dev-shm-usage", "--no-sandbox", "--renderer-process-limit=1",
-            "--no-zygote", "--single-process", "--disable-gpu",
+            "--disable-gpu", "--disable-background-networking",
         ]
     )
     page = browser.new_page(viewport={"width": 1440, "height": 960})
