@@ -163,3 +163,46 @@
   .model-route svg { grid-row: span 2; height: 3.25rem; margin: 0; }
   .model-route span { max-width: none; font-size: .95rem; }
 }
+.showcase-index {
+  display: block;
+  margin-top: 1.5rem;
+}
+.showcase-index ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 11rem));
+  gap: .75rem;
+  padding: 0;
+  list-style: none;
+}
+.showcase-index a {
+  display: grid;
+  gap: .42rem;
+  padding: 0;
+  align-content: start;
+  font-size: .875rem;
+}
+.showcase-index img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--showcase-surface, #eeeee6);
+  border: 1px solid transparent;
+}
+.showcase-index a:hover img, .showcase-index a:focus-visible img {
+  border-color: var(--showcase-accent, var(--ink));
+}
+.case figure[id]:target {
+  outline: 2px solid var(--showcase-accent, var(--accent));
+  outline-offset: 4px;
+}
+[data-project="kvis-sc"] { --showcase-surface: #eadcd4; --showcase-accent: #8a4735; }
+[data-project="kampung-quest"] { --showcase-surface: #e0e9e1; --showcase-accent: #086b55; }
+[data-project="tamestorage"] { --showcase-surface: #e1e7f0; --showcase-accent: #31519e; }
+[data-project="mgans"] { --showcase-surface: #e1e8e5; --showcase-accent: #1a3338; }
+[data-project="sleeppilot"] { --showcase-surface: #e8e5ef; --showcase-accent: #635482; }
+[data-project="luckdee"] { --showcase-surface: #f0e5c8; --showcase-accent: #816036; }
+[data-project="sentctf"] { --showcase-surface: #dce7f0; --showcase-accent: #2e5c83; }
+@media (max-width: 700px) {
+  .showcase-index ul { grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr)); }
+  .showcase-index a { font-size: .8rem; }
+}

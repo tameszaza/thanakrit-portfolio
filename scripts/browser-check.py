@@ -66,6 +66,13 @@ with sync_playwright() as runner:
             check_layout()
         if path in ("/work/tamestorage/", "/work/kvis-sc/"):
             page.screenshot(path=out / f"{path.split('/')[2]}.png", full_page=True)
+        views = page.locator(".showcase-index a")
+        assert views.count() >= 2
+        targets = views.evaluate_all("links => links.map(link => link.hash)")
+        for target in targets:
+            assert page.locator(target).count() == 1
+        views.last.click()
+        assert page.evaluate("location.hash") == targets[-1]
         page.locator(".nextwork").click()
     page.get_by_role("link", name="All work", exact=True).click()
     page.wait_for_url(f"{origin}/#work")

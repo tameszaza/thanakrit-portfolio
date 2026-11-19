@@ -12,9 +12,30 @@ export async function generateMetadata({ params }) {
   return { title: project.name, description: project.summary };
 }
 
+function frameId(frame) {
+  return `view-${frame.image.slice(0, frame.image.lastIndexOf("."))}`;
+}
+
+function ShowcaseIndex({ project, frames }) {
+  return (
+    <nav className="showcase-index" aria-label={`${project.name} showcase views`}>
+      <ul>
+        {[project, ...frames].map((frame) => (
+          <li key={frame.image}>
+            <a href={`#${frameId(frame)}`}>
+              <img src={sitePath(`/media/${frame.image}`)} alt="" loading="lazy" />
+              <span>{frame.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 function Frame({ frame, className = "", lead = false }) {
   return (
-    <figure className={className}>
+    <figure id={frameId(frame)} className={className}>
       <a href={sitePath(`/media/${frame.image}`)} target="_blank" rel="noreferrer" aria-label={`Open image in a new tab: ${frame.alt}`}>
         <img src={sitePath(`/media/${frame.image}`)} alt={frame.alt} loading={lead ? "eager" : "lazy"} />
       </a>
@@ -45,7 +66,7 @@ export default async function Project({ params }) {
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
 
   return (
-    <main id="main" className="case">
+    <main id="main" className="case" data-project={project.slug}>
       <a className="back" href={sitePath("/#work")}>All work</a>
       <header>
         <small>{project.tag}</small>
@@ -66,9 +87,9 @@ export default async function Project({ params }) {
           <p>{project.citation}</p>
         </details>
       )}
+      <ShowcaseIndex project={project} frames={journey.frames} />
       <section className={`journey ${project.slug}`} aria-label="Project journey">
         {project.slug === "mgans" && <ModelFigure />}
-        {journey.flow && <Process flow={journey.flow} />}
         {journey.frames.map((frame) => (
           <Frame
             key={frame.image}
@@ -76,6 +97,7 @@ export default async function Project({ params }) {
             className={`journey-frame${frame.wide ? " wide" : ""}${frame.portrait ? " portrait-frame" : ""}`}
           />
         ))}
+        {journey.flow && <Process flow={journey.flow} />}
       </section>
       <a className="nextwork" href={sitePath(`/work/${next.slug}/`)}>
         <small>Next project</small>{next.name}
