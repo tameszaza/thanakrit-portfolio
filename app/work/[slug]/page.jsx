@@ -60,6 +60,12 @@ export default async function Project({ params }) {
           <a className="textlink" href={project.url}>{project.link || "View repository"}</a>
         )}
       </aside>
+      {project.citation && (
+        <details className="publication">
+          <summary>Publication details</summary>
+          <p>{project.citation}</p>
+        </details>
+      )}
       <section className={`journey ${project.slug}`} aria-label="Project journey">
         {project.slug === "mgans" && <ModelFigure />}
         {journey.flow && <Process flow={journey.flow} />}
@@ -70,15 +76,6 @@ export default async function Project({ params }) {
             className={`journey-frame${frame.wide ? " wide" : ""}${frame.portrait ? " portrait-frame" : ""}`}
           />
         ))}
-        {journey.sample && (
-          <figure className="sample">
-            <figcaption>A question and its source</figcaption>
-            <dl>
-              <dt>Question</dt><dd>{journey.sample.question}</dd>
-              <dt>Retrieved FAQ</dt><dd>{journey.sample.source}</dd>
-            </dl>
-          </figure>
-        )}
       </section>
       <a className="nextwork" href={sitePath(`/work/${next.slug}/`)}>
         <small>Next project</small>{next.name}

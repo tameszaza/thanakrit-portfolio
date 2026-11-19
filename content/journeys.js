@@ -20,6 +20,8 @@ export const journeys = {
   tamestorage: {
     role: "I set up the NAS on a repurposed Lenovo, integrated the file and note workflows, and added two-way calendar sync.",
     frames: [
+      { image: "tamestorage-files.webp", alt: "Tamestorage file manager displaying a sample Studio folder", caption: "My Files with a sample project folder.", wide: true },
+      { image: "storage-network.svg", alt: "Network diagram for the primary NAS and backup disk", caption: "The home storage network.", wide: true },
       { image: "nas-notebook.webp", alt: "Thanakrit’s handwritten sketch connecting five home server services", caption: "The original network notebook sketch.", wide: true },
     ],
     flow: {
@@ -28,16 +30,19 @@ export const journeys = {
     },
   },
   mgans: {
-    role: "I co-authored the ICITEE paper with Pasatorn Soikiri and worked on multi-generator anomaly detection for synthetic speech.",
+    role: "Pasatorn Soikiri and I share first authorship. I worked on multi-generator anomaly detection for synthetic speech.",
     frames: [
+      { image: "mgans-paper-architecture.webp", alt: "The paper’s published architectures for eD-AnoGAN and RES-MGANomaly", caption: "Model architectures from Figure 1. © 2025 IEEE.", wide: true },
+      { image: "mgans-paper-reconstructions.webp", alt: "Input and reconstructed speech spectrograms for four model variants", caption: "Spectrogram reconstructions from Figure 3. © 2025 IEEE.", wide: true },
       { image: "mgans-talk.webp", alt: "ICITEE presentation with the model architecture on screen", caption: "Presenting the architecture at ICITEE 2025." },
       { image: "mgans-venue.webp", alt: "Thanakrit beside the ICITEE conference backdrop", caption: "ICITEE 2025." },
     ],
   },
   sleeppilot: {
     role: "I built the FAQ assistant, added conversation history, and refined the embedding model and retrieval scoring.",
-    frames: [],
-    sample: { question: "Does SleepPilot work without a wearable device?", source: "Yes. SleepPilot can work without a wearable device. Users can manually enter their bedtime, wake-up time, sleep quality, and daily habits." },
+    frames: [
+      { image: "sleeppilot-dialog.webp", alt: "SleepPilot Coach answering a question about wearables and showing its FAQ sources", caption: "A wearable-device question, answered from the indexed FAQ.", portrait: true, wide: true },
+    ],
     flow: {
       caption: "How SleepPilot answers a question",
       steps: [["Ask", "Include recent context"], ["Embed", "Local sentence model"], ["Retrieve", "Rank 15 FAQs with cosine similarity"], ["Reply", "Answer from matching FAQs"]],
@@ -46,7 +51,8 @@ export const journeys = {
   luckdee: {
     role: "I developed the Django storefront and worked on lesson video delivery and course imagery.",
     frames: [
-      { image: "luckdee-chemistry.webp", alt: "Second original P’ Luckdee SimpleSci course poster", caption: "Original SimpleSci course artwork.", portrait: true, wide: true },
+      { image: "simplesci-catalog.webp", alt: "SimpleSci catalog with filters and three example course cards", caption: "Filter courses by subject and level.", wide: true },
+      { image: "simplesci-course.webp", alt: "SimpleSci’s example Biology Olympiad course with lesson topics and enrollment details", caption: "A demo course with lesson topics and enrollment details.", wide: true },
     ],
     flow: {
       caption: "From browsing to the first lesson",
