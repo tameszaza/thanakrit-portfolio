@@ -30,13 +30,13 @@ export default function CV() {
       <header>
         <small>Curriculum vitae</small>
         <h1>Damduan Thanakrit</h1>
-        <p>Computer science · NTU Singapore</p>
+        <p>First-year computer science · NTU Singapore</p>
       </header>
       <section className="cv-grid" aria-label="CV details">
         <article>
           <CvSection id="education" title="Education">
-            <Entry title="Nanyang Technological University">Computer Science, 2026–present.</Entry>
-            <Entry title="Kamnoetvidya Science Academy">2023–26. GPA 3.99/4.00. Highest total score in the school’s Computer Learning Area.</Entry>
+            <Entry title="Nanyang Technological University">Computer Science, 2026–present. ASEAN Scholarship.</Entry>
+            <Entry title="Kamnoetvidya Science Academy" href="/high-school/">2023–26. GPA 3.99/4.00. Highest total score in the school’s Computer Learning Area.</Entry>
           </CvSection>
           <CvSection id="physics" title="Physics Olympiad">
             <Entry title="Thailand Physics Olympiad, 2024">National silver medal. Ranked 12th among 98 national-round competitors.</Entry>
@@ -58,7 +58,7 @@ export default function CV() {
             <Entry title="ODOS digital skills scholarship, 2026">
               Sole district representative for a six-week program at Haaga-Helia University of Applied Sciences in Finland.
             </Entry>
-            <Entry title="Junior Science Talent Project">
+            <Entry title="Junior Science Talent Project" href="/high-school/#mentoring">
               Selected for the NSTDA program and mentored younger students at its 2025 selection camp.
             </Entry>
           </CvSection>
@@ -71,14 +71,14 @@ export default function CV() {
             <Entry title="KVIS Student Committee" href="/work/kvis-sc/">
               Head of IT, 2024–25. Replaced the shared room-booking spreadsheet with a live calendar.
             </Entry>
-            <Entry title="KVIS Open House">
+            <Entry title="KVIS Open House" href="/high-school/#open-house">
               Led the scanner team in 2024 and 2025. Built a system that read paper registrations for around 2,500 students.
             </Entry>
-            <Entry title="Give Got Grown">
+            <Entry title="Give Got Grown" href="/high-school/#give-got-grown">
               Co-founder and monitoring and evaluation lead, 2024–26. The team raised about US$2,400 for rehabilitation equipment and educational toys across five sites.
             </Entry>
             <Entry title="FiSym Club">Co-founder and vice president, 2023–24. Helped design the personal-finance curriculum.</Entry>
-            <Entry title="KVIS International Science Fair">Led video and photography coverage for the five-day 2024 fair.</Entry>
+            <Entry title="KVIS International Science Fair" href="/high-school/#photography">Led video and photography coverage for the five-day 2024 fair.</Entry>
           </CvSection>
           <CvSection id="work-cv" title="Selected work">
             <Entry title="Kampung Quest" href="/work/kampung-quest/">Added accessibility preferences to the activity chat and improved its speed.</Entry>

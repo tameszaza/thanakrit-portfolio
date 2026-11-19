@@ -1,0 +1,115 @@
+.index {
+  display: block;
+  margin-block: 2rem clamp(3rem, 5vw, 5rem);
+}
+
+.index ul {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(.65rem, 1.5vw, 1.25rem);
+  list-style: none;
+  padding: 0;
+}
+
+.index a {
+  display: block;
+  padding: 0;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.index img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 40%;
+  margin-bottom: .5rem;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr);
+  gap: clamp(1.2rem, 5vw, 4rem);
+  border-top: 1px solid var(--rule);
+  padding-block: clamp(1.65rem, 4vw, 3.5rem);
+}
+
+.story small {
+  color: var(--mute);
+}
+
+.story h2 {
+  margin-block: .65rem .85rem;
+  font-size: clamp(1.85rem, 3.5vw, 3.35rem);
+}
+
+.story header p {
+  font-size: 1.04rem;
+  max-width: 36ch;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: min-content min-content;
+  align-content: start;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.photos li:first-child {
+  grid-row: span 2;
+}
+
+.photos a {
+  display: block;
+}
+
+.photos img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 40%;
+  background: var(--rule);
+}
+
+.photos img.toyPortrait {
+  aspect-ratio: 1;
+  object-position: center 8%;
+}
+
+.photos figcaption {
+  font-size: .79rem;
+  margin-top: .35rem;
+}
+
+@media (max-width: 850px) {
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .story header p {
+    max-width: 56ch;
+  }
+}
+
+@media (max-width: 560px) {
+  .index ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: .95rem;
+  }
+
+  .index a {
+    font-size: .85rem;
+  }
+
+  .photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photos li:first-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
