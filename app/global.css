@@ -257,7 +257,11 @@ h1 {
   background:#c5c6da;
 }
 .cover.luckdee {
-  background:#efdfb3;
+  padding: 3%;
+  background: #efdfb3;
+}
+.cover.luckdee img {
+  box-shadow: none;
 }
 .project header {
   display:flex;
@@ -415,10 +419,12 @@ figcaption {
     max-width:41ch;
   }
   .portrait {
-    aspect-ratio:1.9;
+    aspect-ratio: auto;
   }
   .portrait img {
-    object-position:50% 7%;
+    height: auto;
+    aspect-ratio: 5 / 4;
+    object-position: center 6%;
   }
   .catalog {
     grid-template-columns:1fr;
@@ -463,6 +469,7 @@ figcaption {
     gap:1rem;
   }
   .portrait figcaption {
+    position: static;
     font-size:.73rem;
   }
 }
@@ -481,10 +488,6 @@ figcaption {
   * {
     transition:none!important;
   }
-}
-.cover.luckdee img {
-  object-fit: contain;
-  box-shadow: none;
 }
 @media (max-width: 350px) {
   .sectionhead h2 {
