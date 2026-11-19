@@ -8,7 +8,7 @@ export const projects=[
     label: "Council website",
     alt: "KVIS Student Committee homepage with a group portrait and student services",
     caption: "The student committee homepage.",
-    summary: "One front door for student life at Kamnoetvidya Science Academy.",
+    summary: "A school site for reserving rooms, borrowing equipment and checking announcements.",
   },
 {
     slug: "kampung-quest",
@@ -18,29 +18,29 @@ export const projects=[
     label: "Activity dashboard",
     alt: "Activity dashboard from the Kampung Quest demo",
     caption: "The activity dashboard from the Senior Quest prototype.",
-    summary: "Helping older neighbours turn shared interests into plans.",
+    summary: "Helps older neighbours choose an activity they can do together and agree on a time and place.",
     url: git+"Kampung-quest"
   },
 {
     slug: "tamestorage",
     name: "Tamestorage",
-    tag: "Infrastructure",
+    tag: "Home server",
     image: "tamestorage-overview.webp",
     label: "Site overview",
     alt: "Tamestorage landing page with links to files, notes and plans",
-    caption: "The running Tamestorage overview.",
-    summary: "A second life for a Lenovo laptop, as my personal NAS.",
+    caption: "The page I use to reach my files, notes and plans.",
+    summary: "An old Lenovo laptop turned into a home server for files, notes and backups.",
     url: git+"Storage"
   },
 {
     slug: "mgans",
     name: "mGANs",
     tag: "Speech research",
-    image: "mgans.svg",
-    label: "Results",
-    alt: "eD-AnoGAN scores of 0.9211 ROC AUC on WaveFake and 0.8428 on ASVspoof2019 LA",
-    caption: "Reported ROC AUC for eD-AnoGAN across two speech datasets.",
-    summary: "Synthetic Speech Detection via Multi-Generator GANs with Anomaly Detection Architectures",
+    image: "mgans-paper-first-page.webp",
+    label: "The paper",
+    alt: "First page of Synthetic Speech Detection via Multi-Generator GANs with Anomaly Detection Architectures",
+    caption: "The first page of the published ICITEE paper. © 2025 IEEE.",
+    summary: "A study of how well a detector spots AI-generated speech on recordings from a different dataset.",
     citation: "T. Damduan, P. Soikiri, V. Kanjaras, R. Varathikul and K. Sumetpipat. ICITEE 2025, pp. 601–606. DOI 10.1109/ICITEE66631.2025.11338480.",
     url: "https://doi.org/10.1109/ICITEE66631.2025.11338480",
     link: "Read on IEEE Xplore"
@@ -48,12 +48,12 @@ export const projects=[
 {
     slug: "sleeppilot",
     name: "SleepPilot Coach",
-    tag: "Applied ML",
+    tag: "Q&A assistant",
     image: "sleeppilot-ui.webp",
     label: "Assistant",
     alt: "SleepPilot landing page with its FAQ assistant open",
-    caption: "The FAQ assistant inside the SleepPilot landing page.",
-    summary: "A retrieval-augmented assistant with a deliberately small knowledge base.",
+    caption: "Ask a question about the sleep app from its home page.",
+    summary: "A help chatbot that answers questions about a sleep app and shows where each answer came from.",
     url: git+"EndToEndRAG"
   },
 {
@@ -62,9 +62,9 @@ export const projects=[
     tag: "Education",
     image: "simplesci-storefront.webp",
     label: "Storefront",
-    alt: "P’ Luckdee SimpleSci’s Thai-language tutoring storefront",
-    caption: "The SimpleSci storefront, running with demo courses.",
-    summary: "A Thai tutoring storefront that follows students from checkout to class.",
+    alt: "English preview of the P’ Luckdee SimpleSci storefront",
+    caption: "The tutoring storefront in an English demo.",
+    summary: "Students choose a science course, upload a bank transfer receipt and get access to lessons once the tutor confirms payment.",
     url: git+"simplesci"
   },
   {
@@ -75,7 +75,7 @@ export const projects=[
     label: "Awards stage",
     alt: "Team RIPGREP on stage under the SentCTF 2026 event screen",
     caption: "The SentCTF awards at NTU.",
-    summary: "Third prize with Team RIPGREP.",
+    summary: "Third place at NTU’s cybersecurity competition with Team RIPGREP.",
   },
 ];
 export const bySlug = (slug) => projects.find((project) => project.slug === slug);

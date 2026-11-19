@@ -44,22 +44,6 @@ function Frame({ frame, className = "", lead = false }) {
   );
 }
 
-function Process({ flow }) {
-  return (
-    <figure className="process">
-      <figcaption>{flow.caption}</figcaption>
-      <ol>
-        {flow.steps.map(([step, detail]) => (
-          <li key={step}>
-            <strong>{step}</strong>
-            <small>{detail}</small>
-          </li>
-        ))}
-      </ol>
-    </figure>
-  );
-}
-
 export default async function Project({ params }) {
   const project = bySlug((await params).slug);
   const journey = journeys[project.slug];
@@ -97,7 +81,6 @@ export default async function Project({ params }) {
             className={`journey-frame${frame.wide ? " wide" : ""}${frame.portrait ? " portrait-frame" : ""}`}
           />
         ))}
-        {journey.flow && <Process flow={journey.flow} />}
       </section>
       <a className="nextwork" href={sitePath(`/work/${next.slug}/`)}>
         <small>Next project</small>{next.name}

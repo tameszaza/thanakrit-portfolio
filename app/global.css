@@ -239,15 +239,16 @@ h1 {
 .cover.kampung-quest {
   background:#d4deef;
 }
-.cover.tamestorage,.cover.mgans {
+.cover.tamestorage {
   padding:0;
 }
-.cover.tamestorage img,.cover.mgans img {
+.cover.tamestorage img {
   object-fit:contain;
   box-shadow:none;
 }
 .cover.mgans {
-  background:#1a3338;
+  background: #d9e2dc;
+  padding: 7% 11% 0;
 }
 .cover.tamestorage {
   background:#e8ebdf;

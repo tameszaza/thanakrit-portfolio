@@ -20,7 +20,7 @@
   background: #eceee5;
   padding: clamp(.75rem, 2vw, 1.75rem);
 }
-.journey-frame.wide, .process { grid-column: 1 / -1; }
+.journey-frame.wide { grid-column: 1 / -1; }
 .journey-frame a {
   display: grid;
   justify-items: center;
@@ -38,47 +38,6 @@
 .journey.luckdee .journey-frame { background: #f0e5c8; }
 .plate, .journey-frame { scroll-margin: 1.5rem; }
 .plate a { display: block; }
-.process {
-  padding: clamp(1.2rem, 3vw, 2rem) 0;
-  border-block: 1px solid var(--rule);
-}
-.process figcaption {
-  margin: 0 0 1.25rem;
-  color: var(--mute);
-}
-.process ol {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
-  gap: clamp(.8rem, 2.6vw, 2rem);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.process li {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: .4rem;
-  padding-top: .85rem;
-  border-top: 1px solid var(--rule);
-}
-.process li::before {
-  content: "";
-  position: absolute;
-  inset: -3px auto auto 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-.process strong {
-  font: 650 clamp(1.16rem, 2vw, 1.65rem)/1.14 var(--display);
-}
-.process li small {
-  font-family: inherit;
-  color: var(--mute);
-}
 .publication {
   border-bottom: 1px solid var(--rule);
   padding: .8rem 0;
@@ -110,8 +69,6 @@
   .journey-frame.portrait-frame { padding: .55rem; }
   .journey-frame.portrait-frame a { min-height: min(57vh, 23rem); }
   .portrait-frame img { max-height: min(57vh, 23rem); }
-  .process ol { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
-  .process li { padding-top: .7rem; padding-bottom: .65rem; }
   .catalog:not(.list) .cover.sentctf { aspect-ratio: 1.5; }
 }
 @media print {
