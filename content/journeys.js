@@ -43,8 +43,8 @@ export const journeys = {
     ],
   },
   luckdee: {
-    about: "Tutors publish science courses with lesson topics, videos and study materials. Students can browse the catalog before enrolling. When a tutor confirms a bank transfer, the site unlocks that course for the student and tracks how much viewing time they have left.",
-    role: "I built the storefront and worked on how lesson videos and course images are shown.",
+    about: "I built SimpleSci to sell to a friend who tutors science. The site lets them list courses and review bank transfer receipts. Once they confirm a payment, the student gets access to the lesson videos and study materials.",
+    role: "I built the storefront, checkout and private lesson pages.",
     frames: [
       { image: "simplesci-catalog.webp", label: "Courses", alt: "English SimpleSci course catalog with subject and level filters", caption: "Browse by subject or level.", wide: true },
       { image: "simplesci-course.webp", label: "Course page", alt: "English SimpleSci course page with topics and enrollment details", caption: "See what the course covers before enrolling.", wide: true },

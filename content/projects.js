@@ -64,7 +64,7 @@ export const projects=[
     label: "Storefront",
     alt: "English preview of the P’ Luckdee SimpleSci storefront",
     caption: "The tutoring storefront in an English demo.",
-    summary: "Students choose a science course, upload a bank transfer receipt and get access to lessons once the tutor confirms payment.",
+    summary: "A science tutoring storefront I built to sell to a friend who tutors.",
     url: git+"simplesci"
   },
   {

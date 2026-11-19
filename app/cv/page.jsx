@@ -27,7 +27,7 @@ export default function CV() {
         <h2 id="work-cv">Selected work</h2>
         <p><a href={sitePath("/work/kampung-quest/")}>Kampung Quest</a> · Made the activity chat remember access needs, improved its speed, and tested the live site.</p>
         <p><a href={sitePath("/work/sleeppilot/")}>SleepPilot Coach</a> · Built a chatbot that searches help articles, cites them and remembers follow-up questions.</p>
-        <p><a href={sitePath("/work/luckdee/")}>P’ Luckdee SimpleSci</a> · Built the tutoring storefront and improved how lessons and course images are shown.</p>
+        <p><a href={sitePath("/work/luckdee/")}>P’ Luckdee SimpleSci</a> · Built a course storefront, checkout and private lesson library to sell to a friend who tutors science.</p>
         <p><a href={sitePath("/work/tamestorage/")}>Tamestorage</a> · Set up home storage and backups, searchable iPad notes and calendars that sync across devices.</p>
         <p><strong>KVIS Open House</strong> · Led the registration scanner team. Designed the YOLOv8/Flask pipeline and added paper dewarping.</p>
       </section>
