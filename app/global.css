@@ -2,14 +2,36 @@
 @import "@fontsource-variable/dm-sans";
 @import "@fontsource/ibm-plex-mono/400.css";
 :root {
+  color-scheme:light;
   --ink:#20231f;
   --paper:#f8f8f3;
   --accent:#b73713;
   --hot:#ef5d31;
   --rule:#c7c9bf;
   --mute:#535951;
+  --surface:#eceee5;
+  --media-dim:0%;
+  --diagram-surface:#f1f0e9;
+  --diagram-line:#a9ada2;
+  --diagram-grid:#cfcec1;
   --display:"Bricolage Grotesque Variable",Arial,sans-serif;
   --mono:"IBM Plex Mono",monospace;
+}
+@media screen and (prefers-color-scheme:dark) {
+  :root {
+    color-scheme:dark;
+    --ink:#eeeee6;
+    --paper:#272822;
+    --accent:#ffa485;
+    --hot:#ed815d;
+    --rule:#5b5e53;
+    --mute:#bfc1b5;
+    --surface:#33362f;
+    --media-dim:80%;
+    --diagram-surface:#30332c;
+    --diagram-line:#9ca395;
+    --diagram-grid:#60665a;
+  }
 }
 * {
   box-sizing:border-box;
@@ -65,7 +87,7 @@ small,.edition,.back,figcaption,.view,.textlink,footer,.worklink,dt {
 .signature b {
   display:inline-block;
   background:var(--ink);
-  color:white;
+  color:var(--paper);
   font:800 1.42rem/2rem var(--display);
   letter-spacing:-.1em;
   text-align:center;
@@ -93,7 +115,7 @@ nav a:hover,footer a:hover,.textlink:hover,.back:hover {
 .skip {
   position:absolute;
   left:-100vw;
-  background:white;
+  background:var(--paper);
   padding:1rem;
   z-index:3;
 }
@@ -186,7 +208,7 @@ h1 {
 }
 .view button[aria-pressed=true] {
   background:var(--ink);
-  color:white;
+  color:var(--paper);
 }
 .catalog {
   display:grid;
@@ -200,7 +222,8 @@ h1 {
   display:grid;
   place-items:center;
   overflow:hidden;
-  background:#dbe5d9;
+  --cover-surface:#dbe5d9;
+  background:color-mix(in srgb, var(--paper) var(--media-dim), var(--cover-surface));
   padding:6% 7%;
 }
 .cover img {
@@ -221,10 +244,10 @@ h1 {
   text-underline-offset:4px;
 }
 .cover.kvis-sc {
-  background:#e7bba9;
+  --cover-surface:#e7bba9;
 }
 .cover.kampung-quest {
-  background:#d4deef;
+  --cover-surface:#d4deef;
 }
 .cover.tamestorage {
   padding:0;
@@ -234,17 +257,17 @@ h1 {
   box-shadow:none;
 }
 .cover.mgans {
-  background: #d9e2dc;
+  --cover-surface: #d9e2dc;
   padding: 7% 11% 0;
 }
 .cover.tamestorage {
-  background:#e8ebdf;
+  --cover-surface:#e8ebdf;
 }
 .cover.sleeppilot {
-  background:#c5c6da;
+  --cover-surface:#c5c6da;
 }
 .cover.luckdee {
-  background: #efdfb3;
+  --cover-surface: #efdfb3;
 }
 .project header {
   display:flex;
@@ -378,7 +401,7 @@ figcaption {
 }
 .plate {
   padding:clamp(1rem,3vw,3rem);
-  background:#eceee5;
+  background:var(--surface);
 }
 .case .notes {
   margin-top:2rem;

@@ -22,7 +22,7 @@
   margin-block: 2rem 3rem;
 }
 .journey-frame {
-  background: #eceee5;
+  background: color-mix(in srgb, var(--paper) var(--media-dim), var(--frame-surface, var(--surface)));
   padding: clamp(.75rem, 2vw, 1.75rem);
 }
 .journey-frame.wide { grid-column: 1 / -1; }
@@ -36,11 +36,11 @@
   max-height: 76vh;
   object-fit: contain;
 }
-.journey-frame.portrait-frame { background: #e4e7df; }
+.journey-frame.portrait-frame { --frame-surface: #e4e7df; }
 .portrait-frame img { max-height: min(68vh, 41rem); }
-.journey.kampung-quest .portrait-frame { background: #dee6ee; }
-.journey.mgans .journey-frame { background: #e1e8e5; }
-.journey.luckdee .journey-frame { background: #f0e5c8; }
+.journey.kampung-quest .portrait-frame { --frame-surface: #dee6ee; }
+.journey.mgans .journey-frame { --frame-surface: #e1e8e5; }
+.journey.luckdee .journey-frame { --frame-surface: #f0e5c8; }
 .plate, .journey-frame { scroll-margin: 1.5rem; }
 .plate a { display: block; }
 .publication {
@@ -56,8 +56,8 @@
   max-width: 70ch;
   color: var(--mute);
 }
-.cover.gokila { background: #d4e5df; }
-.cover.sentctf { padding: 0; background: #dce7f0; }
+.cover.gokila { --cover-surface: #d4e5df; }
+.cover.sentctf { padding: 0; --cover-surface: #dce7f0; }
 .cover.sentctf img { object-position: center 52%; box-shadow: none; }
 .cv { max-width: 67rem; }
 .cv h1 { font-size: clamp(2.9rem, 7vw, 6rem); }
@@ -122,6 +122,7 @@
   .portrait-frame img { max-height: min(57vh, 23rem); }
 }
 @media print {
+  :root { color-scheme: light; }
   body { background: white; color: black; font-size: 10pt; }
   .mast, footer, .skip { display: none; }
   .cv { width: 100%; line-height: 1.3; }
@@ -142,7 +143,7 @@
 .model-figure {
   grid-column: 1 / -1;
   padding: clamp(1.25rem, 3.3vw, 2.8rem);
-  background: #f1f0e9;
+  background: var(--diagram-surface);
   border-top: 1px solid var(--ink);
 }
 .model-figure figcaption { margin: 0 0 1.75rem; }
@@ -167,7 +168,7 @@
   width: clamp(.75rem, 2vw, 2rem);
   right: calc(-1 * clamp(1.1rem, 3vw, 3rem));
   top: 2.125rem;
-  border-top: 1px solid #aaa99c;
+  border-top: 1px solid var(--diagram-line);
 }
 .model-route svg { width: 100%; height: 4.25rem; margin-bottom: .4rem; overflow: visible; }
 .model-route strong { font: 650 clamp(1.15rem, 2.2vw, 1.65rem)/1.14 var(--display); }
@@ -201,7 +202,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
-  background: var(--showcase-surface, #eeeee6);
+  background: color-mix(in srgb, var(--paper) var(--media-dim), var(--showcase-surface, var(--surface)));
   border: 1px solid transparent;
 }
 .showcase-index a:hover img, .showcase-index a:focus-visible img {
@@ -228,4 +229,8 @@
   max-width: 62ch;
   font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   line-height: 1.5;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .case[data-project] { --showcase-accent: var(--accent); }
 }

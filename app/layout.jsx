@@ -2,4 +2,11 @@ import { sitePath } from "../content/site-path";
 import "./global.css";
 import "./detail.css";
 export const metadata={title:{default:"Damduan Thanakrit — Selected work",template:"%s · Damduan Thanakrit"},description:"Projects, systems and speech research by Damduan Thanakrit, a computer science student at NTU Singapore."};
+export const viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f8f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#272822" },
+  ],
+};
 export default function Layout({children}){return <html lang="en"><body><a className="skip" href="#main">Skip to content</a><header className="mast"><a className="signature" href={sitePath("/")}><b aria-hidden="true">dt<span>.</span></b> Damduan Thanakrit</a><nav aria-label="Primary"><a href={sitePath("/#work")}>Work</a><a href={sitePath("/#about")}>About</a><a href={sitePath("/cv/")}>CV</a><a href="mailto:thanakrit.dam64@gmail.com">Email</a></nav></header>{children}<footer><a href={sitePath("/")}>Damduan Thanakrit</a><a href="https://github.com/tameszaza">GitHub</a><a href="mailto:thanakrit.dam64@gmail.com">Email me</a></footer></body></html>}
