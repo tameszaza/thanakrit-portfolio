@@ -1,5 +1,6 @@
 import { projects, bySlug } from "../../../content/projects";
 import { journeys } from "../../../content/journeys";
+import ModelFigure from "./model-figure";
 
 export function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }));
@@ -59,6 +60,7 @@ export default async function Project({ params }) {
         )}
       </aside>
       <section className={`journey ${project.slug}`} aria-label="Project journey">
+        {project.slug === "mgans" && <ModelFigure />}
         {journey.flow && <Process flow={journey.flow} />}
         {journey.frames.map((frame) => (
           <Frame

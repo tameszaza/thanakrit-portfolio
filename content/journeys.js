@@ -33,10 +33,6 @@ export const journeys = {
       { image: "mgans-talk.webp", alt: "ICITEE presentation with the model architecture on screen", caption: "Presenting the architecture at ICITEE 2025." },
       { image: "mgans-venue.webp", alt: "Thanakrit beside the ICITEE conference backdrop", caption: "ICITEE 2025." },
     ],
-    flow: {
-      caption: "The eD-AnoGAN experiment",
-      steps: [["Speech samples", "Mel spectrograms"], ["Assign clusters", "Multiple generator–encoder branches"], ["Score anomalies", "Reconstruction and latent consistency"], ["Evaluate", "WaveFake and ASVspoof2019 LA"]],
-    },
   },
   sleeppilot: {
     role: "I built the FAQ assistant, added conversation history, and refined the embedding model and retrieval scoring.",
@@ -60,7 +56,7 @@ export const journeys = {
   sentctf: {
     role: "I competed as part of Team RIPGREP in the NTU Cybersecurity Club competition.",
     frames: [
-      { image: "sentctf-team.webp", alt: "Team RIPGREP posing with their certificates at SentCTF", caption: "Team RIPGREP after the awards.", wide: true },
+      { image: "sentctf-certificate.webp", alt: "Thanakrit Damduan’s SentCTF 2026 third-place certificate", caption: "My third-place certificate.", wide: true },
     ],
   },
 };
