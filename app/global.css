@@ -483,10 +483,8 @@ figcaption {
   }
 }
 .cover.luckdee img {
-  object-fit:contain;
-}
-.cover.luckdee img[src$="-poster.webp"] {
-  width:auto;
+  object-fit: contain;
+  box-shadow: none;
 }
 @media (max-width: 350px) {
   .sectionhead h2 {
