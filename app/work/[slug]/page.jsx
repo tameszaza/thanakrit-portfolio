@@ -58,6 +58,10 @@ export default async function Project({ params }) {
         <p>{project.summary}</p>
       </header>
       <Frame frame={project} className={`plate ${project.slug}`} lead />
+      <section className="project-about" aria-labelledby="about-project">
+        <h2 id="about-project">About the project</h2>
+        <p>{journey.about}</p>
+      </section>
       <aside className="contribution" aria-label="My contribution">
         <small>My part</small>
         <p>{journey.role}</p>

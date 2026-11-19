@@ -1,11 +1,13 @@
 export const journeys = {
   "kvis-sc": {
+    about: "Before this site, students used a shared spreadsheet to book rooms, and two groups could end up with the same slot. The live calendar gives everyone one place to see what’s free. The same site also handles equipment loans and student announcements.",
     role: "I led the student IT team and replaced a shared booking spreadsheet with a live calendar.",
     frames: [
       { image: "kvis-bookings.webp", label: "Reserve a room", alt: "Weekly room timetable with available reservation slots", caption: "See which rooms are free, then book a time.", wide: true },
     ],
   },
   "kampung-quest": {
+    about: "A neighbour can tell the app what they enjoy, how far they can walk, and what would make an outing accessible. The app suggests activities that fit. Neighbours can then invite each other and use a group chat to settle the details.",
     role: "I made the activity chat remember access needs, such as avoiding stairs, and sped up slow requests.",
     frames: [
       { image: "kampung-accessibility.webp", label: "Set preferences", alt: "Accessibility preferences on the mobile onboarding screen", caption: "Tell the assistant how far you can walk and whether stairs are a problem.", portrait: true },
@@ -14,6 +16,7 @@ export const journeys = {
     ],
   },
   tamestorage: {
+    about: "I use a web page to reach the files on my old laptop from other devices. When I export a PDF from my iPad, the server links it in Obsidian and reads the pages so I can search them later. A second drive holds a backup.",
     role: "I set up the storage and backups, made my iPad notes searchable, and synced calendar changes across devices.",
     frames: [
       { image: "tamestorage-files.webp", label: "My Files", alt: "Tamestorage file manager displaying a sample Studio folder", caption: "My Files with a sample project folder.", wide: true },
@@ -22,6 +25,7 @@ export const journeys = {
     ],
   },
   mgans: {
+    about: "We built two models that learn patterns in speech and try to reconstruct them. The differences they find help score how unusual a recording is. We tested both models on one collection of recordings and then on a separate collection they hadn’t trained on.",
     role: "Pasatorn Soikiri and I share first authorship. I worked on the model that spots synthetic speech.",
     frames: [
       { image: "mgans.svg", label: "Results", alt: "eD-AnoGAN scores of 0.9211 ROC AUC on WaveFake and 0.8428 on ASVspoof2019 LA", caption: "Closer to 1 is better. The score drops on a different set of recordings.", wide: true },
@@ -32,12 +36,14 @@ export const journeys = {
     ],
   },
   sleeppilot: {
+    about: "SleepPilot is a fictional sleep app with 15 help articles. The chatbot looks through those articles before answering and shows which ones it used. You can ask a follow-up without repeating the details from your first question.",
     role: "I built the search that finds the right help article and added follow-up questions that carry on the conversation.",
     frames: [
       { image: "sleeppilot-dialog.webp", label: "An answer with sources", alt: "SleepPilot Coach answering a question about wearables and showing its FAQ sources", caption: "Asked if a watch is required, the assistant answers and shows the help article it used.", portrait: true, wide: true },
     ],
   },
   luckdee: {
+    about: "Tutors publish science courses with lesson topics, videos and study materials. Students can browse the catalog before enrolling. When a tutor confirms a bank transfer, the site unlocks that course for the student and tracks how much viewing time they have left.",
     role: "I built the storefront and worked on how lesson videos and course images are shown.",
     frames: [
       { image: "simplesci-catalog.webp", label: "Courses", alt: "English SimpleSci course catalog with subject and level filters", caption: "Browse by subject or level.", wide: true },
@@ -46,6 +52,7 @@ export const journeys = {
     ],
   },
   sentctf: {
+    about: "SentCTF is a capture-the-flag competition run by NTU Sentinels. Teams solve cybersecurity puzzles and submit hidden codes called flags to earn points. The photos show the awards and the certificate from our third-place finish.",
     role: "I competed with Team RIPGREP.",
     frames: [
       { image: "sentctf-certificate.webp", label: "Third-place certificate", alt: "Thanakrit Damduan’s SentCTF 2026 third-place certificate", caption: "My third-place certificate.", wide: true },

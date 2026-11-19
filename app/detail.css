@@ -163,3 +163,14 @@
   .showcase-index ul { grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr)); }
   .showcase-index a { font-size: .8rem; }
 }
+
+.project-about {
+  max-width: 66ch;
+  padding: .4rem 0 1.6rem;
+}
+.project-about h2 {
+  margin-bottom: .65rem;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 650;
+  letter-spacing: -.035em;
+}
