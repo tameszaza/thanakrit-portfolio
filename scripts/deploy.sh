@@ -21,9 +21,11 @@ if ! docker container inspect "$container" >/dev/null 2>&1; then
     --publish "127.0.0.1:$local_port:80" \
     --mount "type=bind,src=$PWD/deploy,dst=/portfolio,readonly" \
     httpd:2.4 httpd-foreground -f /portfolio/httpd.conf
+elif [[ "$(docker inspect --format '{{.State.Running}}' "$container")" != true ]]; then
+  docker start "$container"
 fi
 
-curl --fail --silent --show-error --retry 3 --retry-connrefused \
+curl --fail --silent --show-error --max-time 20 --retry 20 --retry-delay 2 --retry-all-errors \
   --output /dev/null "http://127.0.0.1:$local_port/"
 if [[ "${PORTFOLIO_TAILNET:-1}" == 1 ]]; then
   tailscale serve --bg --https "$https_port" "http://127.0.0.1:$local_port"
