@@ -13,3 +13,12 @@ Add a WebP capture to `public/media/` and update the corresponding project’s i
 ## Server
 
 Apache serves a read-only static release through the existing Docker engine. Tailscale Serve publishes HTTPS for the portfolio on its own port. Build and review changes before switching the `deploy/current` symlink to the new release. The live directory and browser test output are excluded from Git.
+
+## Public site
+
+GitHub Pages publishes the public portfolio at
+https://tameszaza.github.io/thanakrit-portfolio/. The workflow in
+`.github/workflows/pages.yml` deploys the static export on pushes to `main`.
+
+Pages supplies its URL prefix as `NEXT_PUBLIC_BASE_PATH` at build time.
+Leave this variable unset when building a release for the Docker server.

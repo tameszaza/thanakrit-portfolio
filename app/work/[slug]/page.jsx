@@ -1,3 +1,4 @@
+import { sitePath } from "../../../content/site-path";
 import { projects, bySlug } from "../../../content/projects";
 import { journeys } from "../../../content/journeys";
 import ModelFigure from "./model-figure";
@@ -14,8 +15,8 @@ export async function generateMetadata({ params }) {
 function Frame({ frame, className = "", lead = false }) {
   return (
     <figure className={className}>
-      <a href={`/media/${frame.image}`} target="_blank" rel="noreferrer" aria-label={`Open image in a new tab: ${frame.alt}`}>
-        <img src={`/media/${frame.image}`} alt={frame.alt} loading={lead ? "eager" : "lazy"} />
+      <a href={sitePath(`/media/${frame.image}`)} target="_blank" rel="noreferrer" aria-label={`Open image in a new tab: ${frame.alt}`}>
+        <img src={sitePath(`/media/${frame.image}`)} alt={frame.alt} loading={lead ? "eager" : "lazy"} />
       </a>
       <figcaption>{frame.caption}</figcaption>
     </figure>
@@ -45,7 +46,7 @@ export default async function Project({ params }) {
 
   return (
     <main id="main" className="case">
-      <a className="back" href="/#work">All work</a>
+      <a className="back" href={sitePath("/#work")}>All work</a>
       <header>
         <small>{project.tag}</small>
         <h1>{project.name}</h1>
@@ -79,7 +80,7 @@ export default async function Project({ params }) {
           </figure>
         )}
       </section>
-      <a className="nextwork" href={`/work/${next.slug}/`}>
+      <a className="nextwork" href={sitePath(`/work/${next.slug}/`)}>
         <small>Next project</small>{next.name}
       </a>
     </main>

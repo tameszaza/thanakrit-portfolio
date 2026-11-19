@@ -1,5 +1,7 @@
 "use client";
 
+import { sitePath } from "../content/site-path";
+
 import { useState } from "react";
 import { projects } from "../content/projects";
 
@@ -27,9 +29,9 @@ export default function Gallery() {
       <ul className={view === "List" ? "catalog list" : "catalog"}>
         {projects.map((project) => (
           <li key={project.slug}>
-            <a className="project" href={`/work/${project.slug}/`}>
+            <a className="project" href={sitePath(`/work/${project.slug}/`)}>
               <figure className={`cover ${project.slug}`}>
-                <img src={`/media/${project.image}`} loading="lazy" alt="" />
+                <img src={sitePath(`/media/${project.image}`)} loading="lazy" alt="" />
               </figure>
               <header>
                 <h3>{project.name}</h3>
