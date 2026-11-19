@@ -37,7 +37,7 @@ with sync_playwright() as runner:
     assert page.title().startswith("Thanakrit")
     assert page.locator("h1").count() == 1
     projects = page.locator(".project")
-    assert projects.count() == 6
+    assert projects.count() == 7
     paths = projects.evaluate_all("links => links.map(link => link.getAttribute('href'))")
     for width in (320, 390, 768, 1024, 1440):
         page.set_viewport_size({"width": width, "height": 960})
@@ -73,7 +73,7 @@ with sync_playwright() as runner:
     missing = page.goto(f"{origin}/missing-page/")
     assert missing.status == 404
     assert page.get_by_role("heading", name="Page not found.").is_visible()
-    print("Passed: 5 home widths, 6 projects at 2 widths, assets, keyboard controls, navigation and 404.", flush=True)
+    print("Passed: 5 home widths, 7 projects at 2 widths, assets, keyboard controls, navigation and 404.", flush=True)
 
     if os.getenv("PORTFOLIO_CAPTURE_NAS") == "1":
         page.set_viewport_size({"width": 1440, "height": 920})

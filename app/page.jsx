@@ -26,7 +26,7 @@ export default function Home() {
         <article>
           <h3>Beyond the projects</h3>
           <dl>
-            <dt>2026</dt><dd><strong>SentCTF</strong>Third prize with Team RIPGREP at NTU.</dd>
+            <dt>2026</dt><dd><strong><a href="/work/sentctf/">SentCTF</a></strong>Third prize with Team RIPGREP at NTU.</dd>
             <dt>2026</dt><dd><strong>WorkBuddy “Age Well” hackathon</strong>Kampung Quest, AI Agent / Skills track.</dd>
             <dt>2026</dt><dd><strong>ExpresSo NB</strong>Venture Building &amp; Lab engineering intern.</dd>
             <dt>2025</dt><dd><strong>SISTEMIC</strong>Bronze for Lumineth, a voice-operated object locator for people with visual impairments.</dd>

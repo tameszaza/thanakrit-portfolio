@@ -1,0 +1,134 @@
+/* Project detail */
+.contribution {
+  display: grid;
+  grid-template-columns: minmax(6rem, auto) 1fr auto;
+  align-items: baseline;
+  gap: 1.4rem;
+  padding: 1.35rem 0;
+  border-block: 1px solid var(--rule);
+}
+.contribution p { max-width: 63ch; }
+.contribution small { color: var(--mute); }
+.contribution .textlink { margin: 0; }
+.journey {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-block: 2rem 3rem;
+}
+.journey-frame {
+  background: #eceee5;
+  padding: clamp(.75rem, 2vw, 1.75rem);
+}
+.journey-frame.wide, .process, .sample { grid-column: 1 / -1; }
+.journey-frame a {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.journey-frame img {
+  width: auto;
+  max-height: 76vh;
+  object-fit: contain;
+}
+.journey-frame.portrait-frame { background: #e4e7df; }
+.portrait-frame img { max-height: min(68vh, 41rem); }
+.journey.kampung-quest .portrait-frame { background: #dee6ee; }
+.journey.mgans .journey-frame { background: #e1e8e5; }
+.journey.luckdee .journey-frame { background: #f0e5c8; }
+.plate, .journey-frame { scroll-margin: 1.5rem; }
+.plate a { display: block; }
+.process {
+  background: #252e29;
+  color: #f8f8f3;
+  padding: clamp(1rem, 3vw, 2.2rem);
+}
+.process figcaption {
+  margin: 0 0 1.6rem;
+  color: #def0d9;
+}
+.process ol {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.process li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .35rem;
+  min-width: 0;
+  min-height: 7.1rem;
+  padding: 1rem;
+  border: 1px solid #91a796;
+  background: #303d34;
+}
+.process li::before {
+  content: "";
+  position: absolute;
+  width: 1.1rem;
+  right: 100%;
+  top: 50%;
+  border-top: 1px dashed #91a796;
+}
+.process li:first-child::before { display: none; }
+.process strong {
+  font: 650 clamp(1.35rem, 2.25vw, 2rem)/1.05 var(--display);
+}
+.process li small { color: #dae7d8; }
+.sample {
+  padding: clamp(1rem, 3vw, 2.2rem);
+  background: #e8e5ef;
+}
+.sample figcaption { margin: 0 0 1rem; }
+.sample dl {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 0 2rem;
+}
+.sample dt { margin-bottom: .5rem; color: var(--mute); }
+.sample dd {
+  grid-row: 2;
+  padding: 1rem;
+  background: #f8f8f3;
+  border-left: 3px solid #78698f;
+}
+.cover.sentctf { padding: 0; background: #dce7f0; }
+.cover.sentctf img { object-position: center 52%; box-shadow: none; }
+.catalog:not(.list) > li:last-child { grid-column: 1 / -1; }
+.catalog:not(.list) .cover.sentctf { aspect-ratio: 2.65; }
+.cv { max-width: 65rem; }
+.cv h1 { font-size: clamp(2.9rem, 7vw, 6rem); }
+.cv section { border-top: 1px solid var(--rule); padding: 1.2rem 0; }
+.cv h2 { font-size: clamp(1.75rem, 3.3vw, 2.5rem); margin-bottom: .7rem; }
+.cv section p + p { margin-top: .45rem; }
+.cv section a { font-weight: 650; text-decoration: underline; text-underline-offset: .17em; }
+@media (max-width: 700px) {
+  .contribution { grid-template-columns: 1fr; gap: .5rem; }
+  .contribution .textlink { justify-self: start; }
+  .journey { gap: .9rem; }
+  .journey-frame:not(.portrait-frame) { grid-column: 1 / -1; }
+  .journey-frame.portrait-frame { padding: .55rem; }
+  .journey-frame.portrait-frame a { min-height: min(57vh, 23rem); }
+  .portrait-frame img { max-height: min(57vh, 23rem); }
+  .process ol { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .process li { min-height: 6rem; padding: .7rem; }
+  .process li::before { display: none; }
+  .sample dl { display: block; }
+  .sample dt:not(:first-child) { margin-top: .9rem; }
+  .catalog:not(.list) .cover.sentctf { aspect-ratio: 1.5; }
+}
+@media print {
+  body { background: white; color: black; font-size: 10pt; }
+  .mast, footer, .skip, .cv .back { display: none; }
+  .cv { width: 100%; }
+  .cv > header { margin: 0 0 1rem; }
+  .cv h1 { font-size: 34pt; }
+  .cv section { break-inside: avoid; }
+  .cv h2 { font-size: 18pt; }
+}
