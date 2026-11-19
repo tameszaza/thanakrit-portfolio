@@ -7,12 +7,12 @@ export default function Home() {
       <section className="hero" aria-labelledby="name">
         <article className="intro">
           <small className="edition">Computer science · NTU Singapore</small>
-          <h1 id="name">Thanakrit<br />Damduan<span>.</span></h1>
+          <h1 id="name">Damduan<br />Thanakrit<span>.</span></h1>
           <p>I build software for classrooms, neighbourhoods and a home server of my own.</p>
           <a className="worklink" href="#work">Explore the work</a>
         </article>
         <figure className="portrait">
-          <img src={sitePath("/media/portrait.webp")} alt="Thanakrit Damduan" fetchPriority="high" />
+          <img src={sitePath("/media/portrait.webp")} alt="Damduan Thanakrit" fetchPriority="high" />
           <figcaption>KVIS, Rayong</figcaption>
         </figure>
       </section>

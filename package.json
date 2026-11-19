@@ -1,7 +1,7 @@
 {
   "name": "thanakrit-portfolio",
   "version": "1.0.0",
-  "description": "Selected work by Thanakrit Damduan",
+  "description": "Selected work by Damduan Thanakrit",
   "scripts": {
     "build": "next build --webpack"
   },

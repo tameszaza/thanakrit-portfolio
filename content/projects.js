@@ -68,6 +68,16 @@ export const projects=[
     url: git+"simplesci"
   },
   {
+    slug: "gokila",
+    name: "GO-KILA",
+    tag: "Sports",
+    image: "gokila-venues.webp",
+    label: "Find a venue",
+    alt: "GO-KILA sports venue search showing courts and pitches",
+    caption: "Finding a court in the DreamSports demo.",
+    summary: "A sports matchmaking site for finding venues, forming teams and organising games.",
+  },
+  {
     slug: "sentctf",
     name: "SentCTF 2026",
     tag: "Hackathon",

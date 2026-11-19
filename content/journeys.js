@@ -21,7 +21,7 @@ export const journeys = {
     frames: [
       { image: "tamestorage-files.webp", label: "My Files", alt: "Tamestorage file manager displaying a sample Studio folder", caption: "My Files with a sample project folder.", wide: true },
       { image: "storage-network.svg", label: "Storage and backups", alt: "Network diagram for the primary NAS and backup disk", caption: "One drive holds my files. A second drive stores a backup.", wide: true },
-      { image: "nas-notebook.webp", label: "Network notebook", alt: "Thanakrit’s handwritten sketch connecting five home server services", caption: "The original network notebook sketch.", wide: true },
+      { image: "nas-notebook.webp", label: "Network notebook", alt: "Damduan Thanakrit’s handwritten sketch connecting five home server services", caption: "The original network notebook sketch.", wide: true },
     ],
   },
   mgans: {
@@ -32,7 +32,7 @@ export const journeys = {
       { image: "mgans-paper-architecture.webp", label: "Model architectures", alt: "The paper’s published architectures for eD-AnoGAN and RES-MGANomaly", caption: "Model architectures from Figure 1. © 2025 IEEE.", wide: true },
       { image: "mgans-paper-reconstructions.webp", label: "Original and rebuilt audio", alt: "Input and reconstructed speech spectrograms for four model variants", caption: "Original and rebuilt sound patterns from Figure 3. © 2025 IEEE.", wide: true },
       { image: "mgans-talk.webp", label: "Presenting the work", alt: "ICITEE presentation with the model architecture on screen", caption: "Presenting the architecture at ICITEE 2025." },
-      { image: "mgans-venue.webp", label: "ICITEE 2025", alt: "Thanakrit beside the ICITEE conference backdrop", caption: "ICITEE 2025." },
+      { image: "mgans-venue.webp", label: "ICITEE 2025", alt: "Damduan Thanakrit beside the ICITEE conference backdrop", caption: "ICITEE 2025." },
     ],
   },
   sleeppilot: {
@@ -51,11 +51,20 @@ export const journeys = {
       { image: "simplesci-checkout.webp", label: "Checkout", alt: "English SimpleSci checkout where students can upload a demo bank transfer receipt", caption: "Upload a bank transfer receipt for the tutor to review.", wide: true },
     ],
   },
+  gokila: {
+    about: "GO-KILA was a team project to make it easier to find people to play sports with. Players can search for nearby venues, start a team around a time and place, and use team chat to agree on the details.",
+    role: "I built the database and server routes, matched players by location, and set up live team chat.",
+    frames: [
+      { image: "gokila-create-team.webp", label: "Start a team", alt: "The GO-KILA team creation form with sport and venue choices", caption: "Pick a sport and venue when starting a team.", wide: true },
+      { image: "gokila-leaderboard.webp", label: "Player rankings", alt: "The GO-KILA leaderboard with a sport filter", caption: "Compare hours played by sport.", wide: true },
+      { image: "gokila-pitch.webp", label: "Project pitch", alt: "Damduan Thanakrit presenting GO-KILA from a sports field", caption: "Introducing the project on a sports field.", portrait: true, wide: true },
+    ],
+  },
   sentctf: {
     about: "SentCTF is a capture-the-flag competition run by NTU Sentinels. Teams solve cybersecurity puzzles and submit hidden codes called flags to earn points. The photos show the awards and the certificate from our third-place finish.",
     role: "I competed with Team RIPGREP.",
     frames: [
-      { image: "sentctf-certificate.webp", label: "Third-place certificate", alt: "Thanakrit Damduan’s SentCTF 2026 third-place certificate", caption: "My third-place certificate.", wide: true },
+      { image: "sentctf-certificate.webp", label: "Third-place certificate", alt: "Damduan Thanakrit’s SentCTF 2026 third-place certificate", caption: "My third-place certificate.", wide: true },
     ],
   },
 };

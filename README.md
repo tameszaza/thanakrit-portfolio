@@ -1,4 +1,4 @@
-# Thanakrit Damduan’s portfolio
+# Damduan Thanakrit’s portfolio
 
 A Next.js static export hosted on the Ubuntu server. Project copy and media references live in `content/projects.js`. The home page and its timeline live in `app/page.jsx`.
 
