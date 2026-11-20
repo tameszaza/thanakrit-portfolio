@@ -87,5 +87,24 @@ export const projects=[
     caption: "The SentCTF awards at NTU.",
     summary: "Third place at NTU’s cybersecurity competition with Team RIPGREP.",
   },
+  {
+    slug: "lumineth",
+    name: "Lumineth",
+    tag: "Assistive technology",
+    image: "lumineth-headset.webp",
+    label: "Wearable prototype",
+    alt: "The Lumineth camera headset mounted on a mannequin",
+    caption: "The camera headset from the Lumineth prototype.",
+    summary: "A voice-operated wearable prototype that helps people with visual impairments find objects and understand their surroundings.",
+    url: "https://sites.google.com/moe.edu.sg/sistemic25/voyager/challenges/stem-innovation-challenge",
+    link: "See SISTEMIC results"
+  },
 ];
+
+export const workPageSize = 8;
+
+export function workPagePath(page) {
+  return page === 1 ? "/#work" : `/?page=${page}#work`;
+}
+
 export const bySlug = (slug) => projects.find((project) => project.slug === slug);

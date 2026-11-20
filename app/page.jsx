@@ -31,7 +31,7 @@ export default function Home() {
             <dt>2026</dt><dd><strong><a href={sitePath("/work/sentctf/")}>SentCTF</a></strong>Third prize with Team RIPGREP at NTU.</dd>
             <dt>2026</dt><dd><strong>WorkBuddy “Age Well” hackathon</strong>Kampung Quest, AI Agent / Skills track.</dd>
             <dt>2026</dt><dd><strong>ExpresSo NB</strong>Venture Building &amp; Lab engineering intern.</dd>
-            <dt>2025</dt><dd><strong>SISTEMIC</strong>Bronze for Lumineth, a voice-operated object locator for people with visual impairments.</dd>
+            <dt>2025</dt><dd><strong><a href={sitePath("/work/lumineth/")}>SISTEMIC</a></strong>Bronze for Lumineth, a voice-operated object locator for people with visual impairments.</dd>
             <dt>2025</dt><dd><strong><a href={sitePath("/high-school/#open-house")}>KVIS Open House</a></strong>Led the team behind a registration scanner for around 2,500 participants.</dd>
           </dl>
           <a className="school-link" href={sitePath("/high-school/")}>

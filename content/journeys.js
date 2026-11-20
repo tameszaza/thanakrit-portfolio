@@ -32,11 +32,11 @@ export const journeys = {
     role: "Pasatorn Soikiri and I share first authorship. I worked on the model that spots synthetic speech.",
     learned: "I learned to represent speech as mel spectrograms and use reconstruction errors to score how unusual a recording is. Comparing ROC AUC across two datasets showed me how much a detector’s performance can depend on the recordings it sees.",
     frames: [
-      { image: "mgans.svg", label: "Results", alt: "eD-AnoGAN scores of 0.9211 ROC AUC on WaveFake and 0.8428 on ASVspoof2019 LA", caption: "Closer to 1 is better. The score drops on a different set of recordings.", wide: true },
       { image: "mgans-paper-architecture.webp", label: "Model architectures", alt: "The paper’s published architectures for eD-AnoGAN and RES-MGANomaly", caption: "Model architectures from Figure 1. © 2025 IEEE.", wide: true },
       { image: "mgans-paper-reconstructions.webp", label: "Original and rebuilt audio", alt: "Input and reconstructed speech spectrograms for four model variants", caption: "Original and rebuilt sound patterns from Figure 3. © 2025 IEEE.", wide: true },
       { image: "mgans-talk.webp", label: "Presenting the work", alt: "ICITEE presentation with the model architecture on screen", caption: "Presenting the architecture at ICITEE 2025." },
-      { image: "mgans-venue.webp", label: "ICITEE 2025", alt: "Damduan Thanakrit beside the ICITEE conference backdrop", caption: "ICITEE 2025." },
+      { image: "mgans-venue.webp", label: "ICITEE 2025", alt: "Damduan Thanakrit beside the ICITEE conference backdrop", caption: "ICITEE 2025 in Bangkok." },
+      { image: "mgans-certificate.webp", label: "Presenter certificate", alt: "ICITEE 2025 certificate recognising Damduan Thanakrit as a presenter of the paper", caption: "Presenter certificate for the paper at ICITEE 2025.", wide: true },
     ],
   },
   sleeppilot: {
@@ -73,6 +73,16 @@ export const journeys = {
     learned: "I practised analysing clues, testing one hypothesis at a time, and sharing findings with teammates. The time limit taught me to recognise when to try a different approach or move to another challenge.",
     frames: [
       { image: "sentctf-certificate.webp", label: "Third-place certificate", alt: "Damduan Thanakrit’s SentCTF 2026 third-place certificate", caption: "My third-place certificate.", wide: true },
+    ],
+  },
+  lumineth: {
+    about: "Lumineth is a wearable prototype for people with visual impairments. A user can ask it to find an everyday object or describe what’s in front of them. The prototype combines a camera, a voice interface, and computer vision, with the wearable and server communicating over WebSockets.",
+    role: "Pasatorn Soikiri and I represented KVIS at SISTEMIC 2025. I presented our prototype, and our team earned bronze in the STEM Innovation Challenge.",
+    learned: "I learned how a wearable can communicate with a computer vision server in real time, and how to make features like finding objects usable through voice.",
+    frames: [
+      { image: "lumineth-demo.webp", label: "Live demonstration", alt: "A team member wearing the Lumineth headset while the team demonstrates the prototype to visitors", caption: "Demonstrating the wearable at SISTEMIC 2025.", wide: true },
+      { image: "lumineth-booth.webp", label: "Project booth", alt: "Two team members with the Lumineth headset and glove at the SISTEMIC project booth", caption: "Our team with the prototype at the project booth." },
+      { image: "lumineth-bronze.webp", label: "Bronze award", alt: "The Lumineth team accepting bronze on stage at SISTEMIC 2025", caption: "Bronze in the SISTEMIC STEM Innovation Challenge." },
     ],
   },
 };

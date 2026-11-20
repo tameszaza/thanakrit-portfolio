@@ -51,7 +51,7 @@ export default function CV() {
             <Entry title="Thailand New Gen Inventors Award, 2025">National silver and Popular Vote for a food-allergy warning tool.</Entry>
             <Entry title="Siriraj Mathematics and Science Aptitude Test, 2024">Second runner-up among 1,303 teams.</Entry>
             <Entry title="SentCTF 2026" href="/work/sentctf/">Third prize with Team RIPGREP at NTU.</Entry>
-            <Entry title="SISTEMIC 2025">Bronze for Lumineth, a voice-operated object locator for people with visual impairments.</Entry>
+            <Entry title="SISTEMIC 2025" href="/work/lumineth/">Bronze for Lumineth, a voice-operated object locator for people with visual impairments.</Entry>
           </CvSection>
           <CvSection id="extracurricular" title="Extracurricular programs">
             <Entry title="ODOS digital skills scholarship, 2026">

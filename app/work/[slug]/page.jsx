@@ -1,5 +1,5 @@
 import { sitePath } from "../../../content/site-path";
-import { projects, bySlug } from "../../../content/projects";
+import { projects, bySlug, workPagePath, workPageSize } from "../../../content/projects";
 import { journeys } from "../../../content/journeys";
 import ModelFigure from "./model-figure";
 
@@ -47,11 +47,13 @@ function Frame({ frame, className = "", lead = false }) {
 export default async function Project({ params }) {
   const project = bySlug((await params).slug);
   const journey = journeys[project.slug];
-  const next = projects[(projects.indexOf(project) + 1) % projects.length];
+  const index = projects.indexOf(project);
+  const next = projects[(index + 1) % projects.length];
+  const galleryPage = Math.floor(index / workPageSize) + 1;
 
   return (
     <main id="main" className="case" data-project={project.slug}>
-      <a className="back" href={sitePath("/#work")}>All work</a>
+      <a className="back" href={sitePath(workPagePath(galleryPage))}>All work</a>
       <header>
         <small>{project.tag}</small>
         <h1>{project.name}</h1>

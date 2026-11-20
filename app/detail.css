@@ -21,6 +21,7 @@
   gap: 1.5rem;
   margin-block: 2rem 3rem;
 }
+.journey.lumineth { grid-template-columns: minmax(0, 1fr) minmax(0, 1.85fr); }
 .journey-frame {
   background: var(--frame-surface, var(--surface));
   padding: clamp(.75rem, 2vw, 1.75rem);
@@ -59,6 +60,7 @@
 .cover.gokila { --cover-surface: #d4e5df; }
 .cover.sentctf { padding: 0; --cover-surface: #dce7f0; }
 .cover.sentctf img { object-position: center 52%; box-shadow: none; }
+.cover.lumineth { --cover-surface: #e6d4d7; }
 .cv { max-width: 67rem; }
 .cv h1 { font-size: clamp(2.9rem, 7vw, 6rem); }
 .cv-grid {
@@ -220,6 +222,7 @@
 [data-project="luckdee"] { --showcase-surface: #f0e5c8; --showcase-accent: #816036; }
 [data-project="gokila"] { --showcase-surface: #d4e5df; --showcase-accent: #167267; }
 [data-project="sentctf"] { --showcase-surface: #dce7f0; --showcase-accent: #2e5c83; }
+[data-project="lumineth"] { --showcase-surface: #e6d4d7; --showcase-accent: #813b59; }
 @media (max-width: 700px) {
   .showcase-index ul { grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr)); }
   .showcase-index a { font-size: .8rem; }
@@ -240,6 +243,7 @@
   .cover.luckdee, [data-project="luckdee"] { --project-mat: #6c532b; }
   .cover.gokila, [data-project="gokila"] { --project-mat: #325e4c; }
   .cover.sentctf, [data-project="sentctf"] { --project-mat: #335d7a; }
+  .cover.lumineth, [data-project="lumineth"] { --project-mat: #694251; }
   .cover,
   .case[data-project] :is(.plate, .journey-frame, .showcase-index img) {
     background: var(--project-mat, var(--surface));
