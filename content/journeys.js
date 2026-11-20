@@ -85,4 +85,14 @@ export const journeys = {
       { image: "lumineth-bronze.webp", label: "Bronze award", alt: "The Lumineth team accepting bronze on stage at SISTEMIC 2025", caption: "Bronze in the SISTEMIC STEM Innovation Challenge." },
     ],
   },
+  "food-allergen": {
+    about: "The prototype uses YOLO to identify foods in a meal photo. The web app maps those predictions to possible allergens and checks them against the user’s saved allergy profile to flag matches.",
+    role: "I developed the food-image recognition model and pitched our prototype at the 2025 Thailand New Gen Inventors Award. Our team earned national silver and the Popular Vote award.",
+    learned: "I learned to connect image-model predictions to a personalised warning in a web app. Working with mixed dishes showed me how much a photo can leave out about a meal’s ingredients.",
+    frames: [
+      { image: "food-allergen-poster.webp", label: "Project poster", alt: "Competition poster showing the food allergen warning workflow, model and sample screens", caption: "The project poster shows the workflow and sample screens.", wide: true },
+      { image: "food-allergen-booth.webp", label: "Exhibition booth", alt: "The project team beside the poster and prototype screens at the exhibition booth", caption: "Our team showing the prototype at Thailand Inventors’ Day." },
+      { image: "food-allergen-award.webp", label: "Popular Vote award", alt: "The project team accepting the I-New Gen Popular Vote award on stage", caption: "Accepting the Popular Vote award at I-New Gen 2025." },
+    ],
+  },
 };

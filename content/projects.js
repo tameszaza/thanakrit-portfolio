@@ -99,6 +99,17 @@ export const projects=[
     url: "https://sites.google.com/moe.edu.sg/sistemic25/voyager/challenges/stem-innovation-challenge",
     link: "See SISTEMIC results"
   },
+  {
+    slug: "food-allergen",
+    name: "Food Allergen Warning",
+    tag: "Computer vision",
+    image: "food-allergen-pitch.webp",
+    label: "Project pitch",
+    alt: "Damduan Thanakrit pitching the Food Allergen Warning prototype at the 2025 I-New Gen Award",
+    caption: "Pitching the prototype at the 2025 Thailand New Gen Inventors Award.",
+    summary: "A computer vision prototype that flags possible allergens from a meal photo and a saved allergy profile.",
+    url: "https://github.com/mbmbjj/Website-Crisis",
+  },
 ];
 
 export const workPageSize = 8;

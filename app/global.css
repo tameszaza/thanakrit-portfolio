@@ -367,6 +367,11 @@ h1 {
   list-style:none;
   padding:0;
 }
+.about strong a {
+  text-decoration:underline;
+  text-decoration-color:var(--rule);
+  text-underline-offset:.18em;
+}
 .about strong a:hover,.school-link:hover strong {
   color:var(--accent);
   text-decoration:underline;
