@@ -5,26 +5,41 @@ import { sitePath } from "../content/site-path";
 import { useEffect, useState } from "react";
 import { projects, workPagePath, workPageSize } from "../content/projects";
 
-const pageCount = Math.ceil(projects.length / workPageSize);
+const pageSizes = { Gallery: workPageSize, List: 15 };
 
-function pageFromLocation() {
-  const page = Number(new URLSearchParams(window.location.search).get("page"));
-  return Number.isInteger(page) && page >= 1 && page <= pageCount ? page : 1;
+function workFromLocation() {
+  const params = new URLSearchParams(window.location.search);
+  const view = params.get("view") === "list" ? "List" : "Gallery";
+  const requestedPage = Number(params.get("page"));
+  const pageCount = Math.ceil(projects.length / pageSizes[view]);
+  const page = Number.isInteger(requestedPage) && requestedPage >= 1 && requestedPage <= pageCount
+    ? requestedPage
+    : 1;
+  return { view, page };
 }
 
 export default function Gallery() {
-  const [view, setView] = useState("Gallery");
-  const [page, setPage] = useState(1);
-  const start = (page - 1) * workPageSize;
-  const end = Math.min(start + workPageSize, projects.length);
+  const [{ view, page }, setWork] = useState({ view: "Gallery", page: 1 });
+  const pageSize = pageSizes[view];
+  const pageCount = Math.ceil(projects.length / pageSize);
+  const start = (page - 1) * pageSize;
+  const end = Math.min(start + pageSize, projects.length);
   const range = start + 1 === end ? end : [start + 1, end].join("–");
 
   useEffect(() => {
-    const syncPage = () => setPage(pageFromLocation());
-    syncPage();
-    window.addEventListener("popstate", syncPage);
-    return () => window.removeEventListener("popstate", syncPage);
+    const syncWork = () => setWork(workFromLocation());
+    syncWork();
+    window.addEventListener("popstate", syncWork);
+    return () => window.removeEventListener("popstate", syncWork);
   }, []);
+
+  function changeView(nextView) {
+    if (nextView === view) return;
+
+    const nextPage = Math.floor(start / pageSizes[nextView]) + 1;
+    window.history.pushState(null, "", sitePath(workPagePath(nextPage, nextView)));
+    setWork({ view: nextView, page: nextPage });
+  }
 
   function changePage(event, nextPage) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -32,7 +47,7 @@ export default function Gallery() {
     if (nextPage === page) return;
 
     window.history.pushState(null, "", event.currentTarget.href);
-    setPage(nextPage);
+    setWork({ view, page: nextPage });
     document.getElementById("work-title").focus({ preventScroll: true });
     document.getElementById("work").scrollIntoView();
   }
@@ -43,12 +58,12 @@ export default function Gallery() {
         <h2 id="work-title" tabIndex={-1}>Selected work</h2>
         <fieldset className="view">
           <legend>Project view</legend>
-          {["Gallery", "List"].map((name) => (
+          {Object.keys(pageSizes).map((name) => (
             <button
               key={name}
               type="button"
               aria-pressed={view === name}
-              onClick={() => setView(name)}
+              onClick={() => changeView(name)}
             >
               {name}
             </button>
@@ -77,7 +92,7 @@ export default function Gallery() {
             {Array.from({ length: pageCount }, (_, index) => index + 1).map((number) => (
               <li key={number}>
                 <a
-                  href={sitePath(workPagePath(number))}
+                  href={sitePath(workPagePath(number, view))}
                   aria-label={`Page ${number}`}
                   aria-current={page === number ? "page" : undefined}
                   onClick={(event) => changePage(event, number)}

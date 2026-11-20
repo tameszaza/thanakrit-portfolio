@@ -114,8 +114,11 @@ export const projects=[
 
 export const workPageSize = 8;
 
-export function workPagePath(page) {
-  return page === 1 ? "/#work" : `/?page=${page}#work`;
+export function workPagePath(page, view = "Gallery") {
+  const params = new URLSearchParams();
+  if (view === "List") params.set("view", "list");
+  if (page > 1) params.set("page", page);
+  return params.size ? `/?${params}#work` : "/#work";
 }
 
 export const bySlug = (slug) => projects.find((project) => project.slug === slug);
