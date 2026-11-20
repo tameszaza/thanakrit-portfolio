@@ -1,6 +1,19 @@
 const git="https://github.com/tameszaza/";
 export const projects=[
 {
+    slug: "mgans",
+    name: "mGANs",
+    tag: "Speech research",
+    image: "mgans-paper-first-page.webp",
+    label: "The paper",
+    alt: "First page of Synthetic Speech Detection via Multi-Generator GANs with Anomaly Detection Architectures",
+    caption: "The first page of the published ICITEE paper. © 2025 IEEE.",
+    summary: "A study of how well a detector spots AI-generated speech on recordings from a different dataset.",
+    citation: "T. Damduan, P. Soikiri, V. Kanjaras, R. Varathikul and K. Sumetpipat. ICITEE 2025, pp. 601–606. DOI 10.1109/ICITEE66631.2025.11338480.",
+    url: "https://doi.org/10.1109/ICITEE66631.2025.11338480",
+    link: "Read on IEEE Xplore"
+  },
+{
     slug: "kvis-sc",
     name: "KVIS SC",
     tag: "Campus software",
@@ -9,6 +22,16 @@ export const projects=[
     alt: "KVIS Student Committee homepage with a group portrait and student services",
     caption: "The student committee homepage.",
     summary: "A school site for reserving rooms, borrowing equipment and checking announcements.",
+  },
+  {
+    slug: "sentctf",
+    name: "SentCTF 2026",
+    tag: "Hackathon",
+    image: "sentctf-stage.webp",
+    label: "Awards stage",
+    alt: "Team RIPGREP on stage under the SentCTF 2026 event screen",
+    caption: "The SentCTF awards at NTU.",
+    summary: "Third place at NTU’s cybersecurity competition with Team RIPGREP.",
   },
 {
     slug: "kampung-quest",
@@ -31,19 +54,6 @@ export const projects=[
     caption: "The page I use to reach my files, notes and plans.",
     summary: "An old Lenovo laptop turned into a home server for files, notes and backups.",
     url: git+"Storage"
-  },
-{
-    slug: "mgans",
-    name: "mGANs",
-    tag: "Speech research",
-    image: "mgans-paper-first-page.webp",
-    label: "The paper",
-    alt: "First page of Synthetic Speech Detection via Multi-Generator GANs with Anomaly Detection Architectures",
-    caption: "The first page of the published ICITEE paper. © 2025 IEEE.",
-    summary: "A study of how well a detector spots AI-generated speech on recordings from a different dataset.",
-    citation: "T. Damduan, P. Soikiri, V. Kanjaras, R. Varathikul and K. Sumetpipat. ICITEE 2025, pp. 601–606. DOI 10.1109/ICITEE66631.2025.11338480.",
-    url: "https://doi.org/10.1109/ICITEE66631.2025.11338480",
-    link: "Read on IEEE Xplore"
   },
 {
     slug: "sleeppilot",
@@ -76,16 +86,6 @@ export const projects=[
     alt: "GO-KILA sports venue search showing courts and pitches",
     caption: "Finding a court in the DreamSports demo.",
     summary: "A sports matchmaking site for finding venues, forming teams and organising games.",
-  },
-  {
-    slug: "sentctf",
-    name: "SentCTF 2026",
-    tag: "Hackathon",
-    image: "sentctf-stage.webp",
-    label: "Awards stage",
-    alt: "Team RIPGREP on stage under the SentCTF 2026 event screen",
-    caption: "The SentCTF awards at NTU.",
-    summary: "Third place at NTU’s cybersecurity competition with Team RIPGREP.",
   },
   {
     slug: "lumineth",

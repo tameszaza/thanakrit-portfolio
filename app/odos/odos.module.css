@@ -1,0 +1,50 @@
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  margin-block: clamp(1.5rem, 4vw, 3rem);
+}
+
+.intro figure a,
+.photos a {
+  display: block;
+}
+
+.intro img,
+.photos img {
+  width: 100%;
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.intro img {
+  aspect-ratio: 4 / 3;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.9rem, 2.2vw, 1.65rem);
+  border-top: 1px solid var(--rule);
+  padding: clamp(1rem, 3vw, 2rem) 0 0;
+  list-style: none;
+}
+
+.photos img {
+  aspect-ratio: 3 / 4;
+}
+
+@media (max-width: 780px) {
+  .intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photos figcaption {
+    font-size: .8rem;
+  }
+}

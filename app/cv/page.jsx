@@ -54,7 +54,7 @@ export default function CV() {
             <Entry title="SISTEMIC 2025" href="/work/lumineth/">Bronze for Lumineth, a voice-operated object locator for people with visual impairments.</Entry>
           </CvSection>
           <CvSection id="extracurricular" title="Extracurricular programs">
-            <Entry title="ODOS digital skills scholarship, 2026">
+            <Entry title="ODOS digital skills scholarship, 2026" href="/odos/">
               Sole district representative for a six-week program at Haaga-Helia University of Applied Sciences in Finland.
             </Entry>
             <Entry title="Junior Science Talent Project" href="/high-school/#mentoring">
